@@ -1,10 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Happy Birthday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aaru 💖</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background:#fff5f7;
+text-align:center;
+}
+
+.header{
+padding:60px 20px;
+background:linear-gradient(135deg,#ffd6e7,#fff);
+}
+
+h1{
+color:#ff4f8b;
+font-size:42px;
+}
+
+.message{
+padding:20px;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
+}
+
+.secret{
+display:none;
+background:white;
+padding:20px;
+margin:20px;
+border-radius:15px;
+}
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:25px;
+background:#ff4f8b;
+color:white;
+font-size:16px;
+}
+
+footer{
+padding:30px;
+}
+</style>
+
+<script>
+function openLetter(){
+document.getElementById("secret").style.display="block";
+}
+</script>
+
 </head>
+
 <body>
-<h1>Happy Birthday ❤️</h1>
-<p>This website is made specially for you.</p>
+
+<div class="header">
+<h1>🎂 Happy Birthday Aaru 💖</h1>
+<p>Wishing you happiness, smiles and beautiful memories.</p>
+</div>
+
+<div class="message">
+<h2>For Aaru ✨</h2>
+
+<p>
+Thank you for being such an important part of my life.
+Your kindness, smile and presence make every moment brighter.
+
+On your special day, I wish you endless happiness,
+success and all the wonderful things you deserve.
+
+Happy Birthday Aaru 💖
+</p>
+</div>
+
+<h2>📸 Our Memories</h2>
+
+<div class="gallery">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+<img src="photo7.jpg">
+<img src="photo8.jpg">
+<img src="photo9.jpg">
+<img src="photo10.jpg">
+<img src="photo11.jpg">
+<img src="photo12.jpg">
+<img src="photo13.jpg">
+<img src="photo14.jpg">
+</div>
+
+<button onclick="openLetter()">💌 Open Special Message</button>
+
+<div class="secret" id="secret">
+<h2>Secret Letter 💖</h2>
+
+<p>
+Aaru,
+
+You are one of those people who make life feel a little
+more beautiful just by being themselves.
+
+Thank you for every smile, every conversation,
+and every memory.
+
+May this year bring you happiness, peace,
+success and countless reasons to smile.
+
+Happy Birthday once again. ✨💖
+</p>
+</div>
+
+<footer>
+Made with ❤️ for Aaru
+</footer>
+
 </body>
 </html>
