@@ -1,142 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Aaru 💖</title>
+<title>A Special Surprise For Aaru 💖</title>
 
 <style>
-body{
-font-family:Arial,sans-serif;
+*{
 margin:0;
 padding:0;
-background:#fff5f7;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffd6e7,#fff0f5);
+overflow-x:hidden;
+}
+
+#welcome{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
 }
 
-.header{
-padding:60px 20px;
-background:linear-gradient(135deg,#ffd6e7,#fff);
-}
-
 h1{
-color:#ff4f8b;
 font-size:42px;
+color:#ff4f8b;
+margin-bottom:20px;
 }
 
-.message{
-padding:20px;
-max-width:700px;
-margin:auto;
-line-height:1.8;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-padding:20px;
-}
-
-.gallery img{
-width:100%;
-border-radius:12px;
-}
-
-.secret{
-display:none;
-background:white;
-padding:20px;
-margin:20px;
-border-radius:15px;
+p{
+font-size:18px;
+color:#555;
 }
 
 button{
-padding:12px 20px;
+margin-top:30px;
+padding:15px 35px;
 border:none;
-border-radius:25px;
+border-radius:50px;
 background:#ff4f8b;
 color:white;
-font-size:16px;
+font-size:18px;
+cursor:pointer;
 }
 
-footer{
-padding:30px;
+#main{
+display:none;
+padding:40px 20px;
+text-align:center;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
 }
 </style>
-
-<script>
-function openLetter(){
-document.getElementById("secret").style.display="block";
-}
-</script>
-
 </head>
 
 <body>
 
-<div class="header">
+<div id="welcome">
+<h1>A Special Surprise For Aaru 💖</h1>
+<p>Tap below to enter your birthday surprise ✨</p>
+
+<button onclick="enterSite()">
+Enter ✨
+</button>
+</div>
+
+<div id="main">
 <h1>🎂 Happy Birthday Aaru 💖</h1>
-<p>Wishing you happiness, smiles and beautiful memories.</p>
+<p>More surprises are waiting below...</p>
 </div>
 
-<div class="message">
-<h2>For Aaru ✨</h2>
+<script>
+function enterSite(){
+document.getElementById("welcome").style.display="none";
+document.getElementById("main").style.display="block";
+}
 
-<p>
-Thank you for being such an important part of my life.
-Your kindness, smile and presence make every moment brighter.
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"vw";
+document.body.appendChild(heart);
 
-On your special day, I wish you endless happiness,
-success and all the wonderful things you deserve.
+setTimeout(()=>{
+heart.remove();
+},8000);
 
-Happy Birthday Aaru 💖
-</p>
-</div>
-
-<h2>📸 Our Memories</h2>
-
-<div class="gallery">
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
-<img src="photo4.jpg">
-<img src="photo5.jpg">
-<img src="photo6.jpg">
-<img src="photo7.jpg">
-<img src="photo8.jpg">
-<img src="photo9.jpg">
-<img src="photo10.jpg">
-<img src="photo11.jpg">
-<img src="photo12.jpg">
-<img src="photo13.jpg">
-<img src="photo14.jpg">
-</div>
-
-<button onclick="openLetter()">💌 Open Special Message</button>
-
-<div class="secret" id="secret">
-<h2>Secret Letter 💖</h2>
-
-<p>
-Aaru,
-
-You are one of those people who make life feel a little
-more beautiful just by being themselves.
-
-Thank you for every smile, every conversation,
-and every memory.
-
-May this year bring you happiness, peace,
-success and countless reasons to smile.
-
-Happy Birthday once again. ✨💖
-</p>
-</div>
-
-<footer>
-Made with ❤️ for Aaru
-</footer>
+},500);
+</script>
 
 </body>
 </html>
