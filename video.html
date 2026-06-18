@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Special Videos 🎥</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fff5f7,#ffe4ec,#ffd6e7);
+padding:25px;
+overflow-x:hidden;
+}
+
+.title{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-size:70px;
+color:#111;
+margin-bottom:15px;
+animation:fadeDown 1.5s ease;
+}
+
+.subtitle{
+text-align:center;
+font-size:18px;
+color:#666;
+margin-bottom:35px;
+}
+
+.video-card{
+background:white;
+padding:25px;
+margin:20px auto;
+max-width:600px;
+border-radius:25px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+text-align:center;
+transition:.3s;
+animation:fadeUp 1.2s ease;
+}
+
+.video-card:hover{
+transform:scale(1.03);
+}
+
+.video-title{
+font-size:24px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.video-text{
+color:#666;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:#ff4f8b;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+}
+
+.final-btn{
+display:block;
+width:max-content;
+margin:40px auto;
+padding:16px 40px;
+background:#111;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:18px;
+}
+
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:24px;
+animation:float 8s linear forwards;
+pointer-events:none;
+}
+
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-120vh);opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 class="title">Special Videos 🎥</h1>
+
+<p class="subtitle">
+Some special memories made just for you 💖
+</p>
+
+<div class="video-card">
+<div class="video-title">🎬 Video 1</div>
+<div class="video-text">A special memory</div>
+<a href="#" class="btn">Watch Video</a>
+</div>
+
+<div class="video-card">
+<div class="video-title">🎬 Video 2</div>
+<div class="video-text">A beautiful moment</div>
+<a href="#" class="btn">Watch Video</a>
+</div>
+
+<div class="video-card">
+<div class="video-title">🎬 Video 3</div>
+<div class="video-text">A collection of memories</div>
+<a href="#" class="btn">Watch Video</a>
+</div>
+
+<div class="video-card">
+<div class="video-title">🎂 Final Birthday Video</div>
+<div class="video-text">One last surprise</div>
+<a href="#" class="btn">Watch Video</a>
+</div>
+
+<a href="secret.html" class="final-btn">
+Final Surprise 💖
+</a>
+
+<script>
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(heart);
+
+setTimeout(function(){
+heart.remove();
+},8000);
+
+},600);
+
+</script>
+
+</body>
+</html>
