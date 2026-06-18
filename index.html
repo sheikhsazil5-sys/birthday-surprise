@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Aaru 💖</title>
+
+<title>Aaru 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ffd6e7,#fff0f5);
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fff5f7,#ffe4ec,#ffd6e7);
 overflow-x:hidden;
+color:#444;
 }
+
+/* Welcome Screen */
 
 #welcome{
 height:100vh;
@@ -28,76 +35,129 @@ text-align:center;
 padding:20px;
 }
 
-#main{
-display:none;
-padding:30px;
-text-align:center;
-}
-
-h1{
+#welcome h1{
+font-family:'Great Vibes',cursive;
+font-size:90px;
 color:#ff4f8b;
-font-size:42px;
-margin-bottom:15px;
+text-shadow:0 0 20px rgba(255,79,139,0.35);
 }
 
-h2{
-color:#ff4f8b;
-margin-top:30px;
-margin-bottom:15px;
-}
-
-p{
-color:#555;
-font-size:18px;
-line-height:1.8;
+#welcome p{
+font-size:20px;
+margin-top:10px;
 }
 
 button{
-padding:15px 35px;
+margin-top:30px;
+padding:15px 40px;
 border:none;
-border-radius:30px;
+border-radius:50px;
 background:#ff4f8b;
 color:white;
 font-size:18px;
 cursor:pointer;
-margin-top:20px;
+box-shadow:0 10px 25px rgba(255,79,139,.35);
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#main{
+display:none;
+padding:25px;
+text-align:center;
+animation:fadeIn 1s ease;
+}
+
+.main-title{
+font-family:'Great Vibes',cursive;
+font-size:75px;
+color:#ff4f8b;
+margin-bottom:15px;
+}
+
+.subtitle{
+font-size:18px;
+margin-bottom:25px;
+}
+
+/* Letter Card */
+
+.letter{
+max-width:800px;
+margin:30px auto;
+padding:30px;
+background:rgba(255,255,255,0.55);
+backdrop-filter:blur(12px);
+border-radius:25px;
+box-shadow:0 10px 35px rgba(255,79,139,.15);
+}
+
+.letter h2{
+font-family:'Playfair Display',serif;
+color:#ff4f8b;
+margin-bottom:15px;
+}
+
+.letter p{
+line-height:1.9;
+font-size:17px;
+}
+
+/* Gallery */
+
+.gallery-title{
+margin-top:40px;
+font-size:32px;
+color:#ff4f8b;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:15px;
 margin-top:20px;
 }
 
-.gallery img{
-width:100%;
-border-radius:15px;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
+.photo{
+background:white;
+padding:50px 10px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transform:rotate(-2deg);
 }
 
-.fade-out{
-animation:fadeOut 1s forwards;
+.photo:nth-child(even){
+transform:rotate(2deg);
 }
 
-.fade-in{
-animation:fadeIn 1s forwards;
+/* Video Cards */
+
+.video-card{
+background:white;
+padding:18px;
+margin:15px auto;
+max-width:450px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-@keyframes fadeOut{
-from{opacity:1;}
-to{opacity:0;}
+/* Footer */
+
+.footer{
+margin-top:50px;
+font-size:18px;
+color:#ff4f8b;
 }
 
-@keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
-}
+/* Floating Hearts */
 
 .heart{
 position:fixed;
 bottom:-50px;
-font-size:25px;
+font-size:24px;
 animation:float 8s linear forwards;
 pointer-events:none;
 }
@@ -112,72 +172,119 @@ transform:translateY(-120vh);
 opacity:0;
 }
 }
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 </style>
 </head>
 
 <body>
 
 <div id="welcome">
-<h1>💖 A Special Surprise For Aaru 💖</h1>
-<p>Tap below to enter your birthday surprise ✨</p>
-<button onclick="enterSite()">Enter ✨</button>
+
+<h1>Aaru 💖</h1>
+
+<p>
+A special surprise made just for you ✨
+</p>
+
+<button onclick="enterSite()">
+Open Your Surprise 🎁
+</button>
+
 </div>
 
 <div id="main">
 
-<h1>🎂 Happy Birthday Aaru 💖</h1>
+<h1 class="main-title">
+Happy Birthday Aaru 💖
+</h1>
 
-<p>
-May your day be filled with happiness, smiles,
-love and beautiful memories. ✨
+<p class="subtitle">
+May your day be filled with happiness, smiles and beautiful memories ✨
 </p>
+
+<div class="letter">
 
 <h2>💌 A Letter For Aaru</h2>
 
 <p>
-Dear Aaru,<br><br>
+
+Dear Aaru,
+
+<br><br>
 
 Thank you for being such an important part of my life.
-Your kindness, smile and presence make every moment brighter.<br><br>
 
-On your special day, I wish you endless happiness,
-success and beautiful memories.<br><br>
+Your kindness, smile and presence make every moment brighter.
 
-✨ Happy Birthday Aaru 💖
+<br><br>
+
+On your special day, I wish you endless happiness, success and beautiful memories.
+
+<br><br>
+
+May every dream you have come true and may your smile never fade.
+
+<br><br>
+
+Keep shining, keep smiling and keep being the wonderful person you are.
+
+<br><br>
+
+💖 Happy Birthday 💖
+
 </p>
 
-<h2>📸 Our Memories</h2>
-
-<div class="gallery">
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
-<img src="photo4.jpg">
 </div>
 
-<h2>🎥 Special Videos</h2>
+<h2 class="gallery-title">📸 Our Memories</h2>
 
-<p>
-Scan the QR codes below to watch special memories.
-</p>
+<div class="gallery">
+
+<div class="photo">📷 Memory 1</div>
+<div class="photo">📷 Memory 2</div>
+<div class="photo">📷 Memory 3</div>
+<div class="photo">📷 Memory 4</div>
+<div class="photo">📷 Memory 5</div>
+<div class="photo">📷 Memory 6</div>
+
+</div>
+
+<h2 class="gallery-title">🎥 Special Videos</h2>
+
+<div class="video-card">
+🎬 Birthday Memory Video 1
+</div>
+
+<div class="video-card">
+🎬 Birthday Memory Video 2
+</div>
+
+<div class="video-card">
+🎬 Birthday Memory Video 3
+</div>
+
+<div class="footer">
+Made Especially For Aaru 💖✨
+</div>
 
 </div>
 
 <script>
 
 function enterSite(){
-
-let welcome=document.getElementById("welcome");
-let main=document.getElementById("main");
-
-welcome.classList.add("fade-out");
-
-setTimeout(function(){
-welcome.style.display="none";
-main.style.display="block";
-main.classList.add("fade-in");
-},1000);
-
+document.getElementById("welcome").style.display="none";
+document.getElementById("main").style.display="block";
 }
 
 setInterval(function(){
