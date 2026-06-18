@@ -27,13 +27,15 @@ font-family:'Poppins',sans-serif;
 position:relative;
 }
 
+/* Background Glow */
+
 .glow{
 position:absolute;
 width:350px;
 height:350px;
 border-radius:50%;
-background:rgba(255,79,139,.15);
-filter:blur(80px);
+background:rgba(255,105,180,.15);
+filter:blur(90px);
 }
 
 .glow1{
@@ -46,6 +48,8 @@ bottom:-120px;
 right:-120px;
 }
 
+/* Main Content */
+
 .container{
 text-align:center;
 z-index:2;
@@ -54,9 +58,9 @@ padding:20px;
 
 .name{
 font-family:'Tangerine',cursive;
-font-size:140px;
-color:#ff4f8b;
-text-shadow:0 0 25px rgba(255,79,139,.35);
+font-size:150px;
+color:#111;
+text-shadow:2px 2px 12px rgba(0,0,0,.12);
 animation:fadeUp 1.5s ease;
 }
 
@@ -86,6 +90,8 @@ animation:fadeUp 2.5s ease;
 transform:scale(1.05);
 }
 
+/* Floating Hearts */
+
 .heart{
 position:fixed;
 bottom:-50px;
@@ -104,6 +110,8 @@ transform:translateY(-120vh);
 opacity:0;
 }
 }
+
+/* Fade Animation */
 
 @keyframes fadeUp{
 from{
