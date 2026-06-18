@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@ font-family:Arial,sans-serif;
 
 body{
 background:linear-gradient(135deg,#ffd6e7,#fff0f5);
-overflow-x:hidden;
+overflow:hidden;
 }
 
 #welcome{
@@ -27,10 +27,21 @@ align-items:center;
 text-align:center;
 }
 
+#main{
+display:none;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
 h1{
-font-size:42px;
 color:#ff4f8b;
-margin-bottom:20px;
+font-size:42px;
+margin-bottom:15px;
 }
 
 p{
@@ -39,35 +50,29 @@ color:#555;
 }
 
 button{
-margin-top:30px;
+margin-top:25px;
 padding:15px 35px;
 border:none;
-border-radius:50px;
+border-radius:30px;
 background:#ff4f8b;
 color:white;
 font-size:18px;
 cursor:pointer;
 }
 
-#main{
-display:none;
-padding:40px 20px;
-text-align:center;
-}
-
 .heart{
 position:fixed;
-bottom:-20px;
-font-size:20px;
-animation:float 8s linear infinite;
+bottom:-50px;
+font-size:25px;
+animation:float 8s linear forwards;
 }
 
 @keyframes float{
-from{
+0%{
 transform:translateY(0);
 opacity:1;
 }
-to{
+100%{
 transform:translateY(-120vh);
 opacity:0;
 }
@@ -80,31 +85,28 @@ opacity:0;
 <div id="welcome">
 <h1>A Special Surprise For Aaru 💖</h1>
 <p>Tap below to enter your birthday surprise ✨</p>
-
-<button onclick="enterSite()">
-Enter ✨
-</button>
+<button onclick="enterSite()">Enter ✨</button>
 </div>
 
 <div id="main">
 <h1>🎂 Happy Birthday Aaru 💖</h1>
-<p>More surprises are waiting below...</p>
+<p>You are one of the most special people in my life. ✨</p>
 </div>
 
 <script>
 function enterSite(){
 document.getElementById("welcome").style.display="none";
-document.getElementById("main").style.display="block";
+document.getElementById("main").style.display="flex";
 }
 
-setInterval(()=>{
+setInterval(function(){
 let heart=document.createElement("div");
 heart.className="heart";
 heart.innerHTML="💖";
 heart.style.left=Math.random()*100+"vw";
 document.body.appendChild(heart);
 
-setTimeout(()=>{
+setTimeout(function(){
 heart.remove();
 },8000);
 
