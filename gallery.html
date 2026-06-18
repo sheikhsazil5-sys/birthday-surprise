@@ -165,21 +165,8 @@ player.addEventListener("ended", function () {
 <p class="subtitle">
 Every memory tells a beautiful story ✨
 </p>
-
-<div class="gallery">
-
-<div class="memory"><a href="photo1.jpg" target="_blank"><img src="photo1.jpg" alt=""></a></div>
-<div class="memory"><a href="photo2.jpg" target="_blank"><img src="photo2.jpg" alt=""></a></div>
-<div class="memory"><a href="photo3.jpg" target="_blank"><img src="photo3.jpg" alt=""></a></div>
-<div class="memory"><a href="photo4.jpg" target="_blank"><img src="photo4.jpg" alt=""></a></div>
-<div class="memory"><a href="photo5.jpg" target="_blank"><img src="photo5.jpg" alt=""></a></div>
-<div class="memory"><a href="photo6.jpg" target="_blank"><img src="photo6.jpg" alt=""></a></div>
-<div class="memory"><a href="photo7.jpg" target="_blank"><img src="photo7.jpg" alt=""></a></div>
-<div class="memory"><a href="photo8.jpg" target="_blank"><img src="photo8.jpg" alt=""></a></div>
-<div class="memory"><a href="photo9.jpg" target="_blank"><img src="photo9.jpg" alt=""></a></div>
-<div class="memory"><a href="photo10.jpg" target="_blank"><img src="photo10.jpg" alt=""></a></div>
-<div class="memory"><a href="photo11.jpg" target="_blank"><img src="photo11.jpg" alt=""></a></div>
-<div class="memory"><a href="photo12.jpg" target="_blank"><img src="photo12.jpg" alt=""></a></div>
+<div class="slideshow">
+  <img id="slide" src="photo1.jpg">
 </div>
 
 <a href="videos.html" class="btn">
@@ -206,6 +193,29 @@ heart.remove();
 },600);
 
 </script>
+<script>
+const photos = [
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg",
+"photo6.jpg",
+"photo7.jpg",
+"photo8.jpg",
+"photo9.jpg",
+"photo10.jpg",
+"photo11.jpg",
+"photo12.jpg"
+];
 
+let current = 0;
+
+setInterval(function() {
+  current = (current + 1) % photos.length;
+  document.getElementById("slide").src = photos[current];
+}, 3000);
+</script>
+  
 </body>
 </html>
