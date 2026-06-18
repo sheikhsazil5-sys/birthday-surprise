@@ -35,36 +35,38 @@ font-family:'Cormorant Garamond',serif;
 font-size:90px;
 color:#000;
 margin-bottom:30px;
+animation:slideDown 1.5s ease;
 }
 
 .card{
-background:rgba(255,255,255,.75);
+background:rgba(255,255,255,0.75);
 backdrop-filter:blur(15px);
 padding:40px;
 border-radius:30px;
 box-shadow:0 10px 35px rgba(0,0,0,.1);
+animation:fadeUp 2s ease;
 }
 
 .card h2{
 font-size:34px;
-color:#000;
-margin-bottom:25px;
+color:#ff4f8b;
+margin-bottom:20px;
 text-align:center;
 }
 
 .card p{
 font-size:22px;
-line-height:2.1;
+line-height:2;
 color:#222;
 font-weight:500;
 }
 
 .signature{
 margin-top:30px;
-font-size:26px;
+text-align:right;
+font-size:24px;
 font-weight:600;
 color:#ff4f8b;
-text-align:right;
 }
 
 .btn{
@@ -79,11 +81,7 @@ border-radius:50px;
 font-size:20px;
 font-weight:600;
 box-shadow:0 10px 25px rgba(255,79,139,.3);
-transition:.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
+animation:pulse 2s infinite;
 }
 
 .heart{
@@ -92,6 +90,40 @@ bottom:-50px;
 font-size:24px;
 animation:float 8s linear forwards;
 pointer-events:none;
+}
+
+@keyframes slideDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.05);
+}
+100%{
+transform:scale(1);
+}
 }
 
 @keyframes float{
@@ -130,27 +162,19 @@ Today is all about celebrating someone truly special.
 
 <br><br>
 
-I wanted to make something that would always remind you of how amazing, kind and beautiful you are as a person.
+I wanted to create something beautiful for you, something that reminds you how important and wonderful you are.
 
 <br><br>
 
-You have a way of making moments feel brighter and memories feel more meaningful.
+Your smile has a way of making everything brighter, and your presence makes every moment feel a little more special.
 
 <br><br>
 
-Your smile can light up a room, and your presence makes people feel comfortable and happy.
+May this birthday bring you endless happiness, success, peace, laughter and memories you'll cherish forever.
 
 <br><br>
 
-On this special day, I wish you endless happiness, good health, success, peace and beautiful memories that stay with you forever.
-
-<br><br>
-
-May every dream you have find its way to reality and may your life always be filled with laughter and love.
-
-<br><br>
-
-Thank you for being such a wonderful person.
+Keep smiling, keep shining, and never stop being the amazing person you are.
 
 <br><br>
 
@@ -159,7 +183,7 @@ Thank you for being such a wonderful person.
 </p>
 
 <div class="signature">
-With Best Wishes 💖
+With Love 💖
 </div>
 
 </div>
@@ -187,7 +211,7 @@ setTimeout(function(){
 heart.remove();
 },8000);
 
-},700);
+},500);
 
 </script>
 
