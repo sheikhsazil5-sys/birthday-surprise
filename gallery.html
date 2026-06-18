@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Our Memories 📸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fff5f7,#ffe4ec,#ffd6e7);
+padding:25px;
+overflow-x:hidden;
+}
+
+.title{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-size:70px;
+color:#111;
+margin-bottom:25px;
+animation:fadeDown 1.5s ease;
+}
+
+.subtitle{
+text-align:center;
+font-size:18px;
+color:#666;
+margin-bottom:30px;
+animation:fadeDown 2s ease;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:18px;
+max-width:1000px;
+margin:auto;
+}
+
+.memory{
+background:white;
+padding:55px 10px;
+border-radius:20px;
+text-align:center;
+font-size:18px;
+font-weight:600;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+animation:fadeUp 1s ease;
+transition:.3s;
+}
+
+.memory:hover{
+transform:scale(1.05) rotate(2deg);
+}
+
+.btn{
+display:block;
+width:max-content;
+margin:40px auto;
+padding:16px 40px;
+background:#ff4f8b;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:20px;
+font-weight:600;
+box-shadow:0 10px 25px rgba(255,79,139,.3);
+animation:pulse 2s infinite;
+}
+
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:24px;
+animation:float 8s linear forwards;
+pointer-events:none;
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 class="title">Our Memories 📸</h1>
+
+<p class="subtitle">
+Every memory tells a beautiful story ✨
+</p>
+
+<div class="gallery">
+
+<div class="memory">📷 Memory 1</div>
+<div class="memory">📷 Memory 2</div>
+<div class="memory">📷 Memory 3</div>
+<div class="memory">📷 Memory 4</div>
+<div class="memory">📷 Memory 5</div>
+<div class="memory">📷 Memory 6</div>
+
+<div class="memory">📷 Memory 7</div>
+<div class="memory">📷 Memory 8</div>
+<div class="memory">📷 Memory 9</div>
+<div class="memory">📷 Memory 10</div>
+<div class="memory">📷 Memory 11</div>
+<div class="memory">📷 Memory 12</div>
+
+<div class="memory">📷 Memory 13</div>
+<div class="memory">📷 Memory 14</div>
+<div class="memory">📷 Memory 15</div>
+<div class="memory">📷 Memory 16</div>
+<div class="memory">📷 Memory 17</div>
+<div class="memory">📷 Memory 18</div>
+
+</div>
+
+<a href="videos.html" class="btn">
+Watch Special Videos 🎥
+</a>
+
+<script>
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(heart);
+
+setTimeout(function(){
+heart.remove();
+},8000);
+
+},600);
+
+</script>
+
+</body>
+</html>
