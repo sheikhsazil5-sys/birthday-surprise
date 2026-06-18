@@ -136,7 +136,23 @@ transform:translateY(-120vh);
 opacity:0;
 }
 }
+.ending{
+    text-align:center;
+    margin-top:25px;
+    font-size:24px;
+    font-weight:600;
+    color:#ff4f8b;
+    animation: heartbeat 1.5s infinite;
+}
 
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    25%{transform:scale(1.1);}
+    50%{transform:scale(1);}
+    75%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+  
 </style>
 </head>
 
@@ -168,8 +184,11 @@ player.addEventListener("ended", function () {
 
 <div class="container">
 
-<div class="title">
-Happy Birthday Aaru 💖
+<div class="signature">
+Happy Birthday Aaru 🎂💖
+  <div class="ending">
+💖 Forever Special 💖
+  </div>
 </div>
 
 <div class="card">
