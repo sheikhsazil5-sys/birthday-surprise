@@ -116,6 +116,30 @@ to{opacity:1;transform:translateY(0);}
 
 <body>
 
+  <audio id="bgMusic"></audio>
+
+<script>
+const songs = [
+  "song.mp3",
+  "song2.mp3"
+];
+
+let currentSong = 0;
+const player = document.getElementById("bgMusic");
+
+player.src = songs[currentSong];
+
+document.addEventListener("click", function () {
+  player.play();
+}, { once: true });
+
+player.addEventListener("ended", function () {
+  currentSong = (currentSong + 1) % songs.length;
+  player.src = songs[currentSong];
+  player.play();
+});
+</script>
+
 <h1 class="title">Special Videos 🎥</h1>
 
 <p class="subtitle">
