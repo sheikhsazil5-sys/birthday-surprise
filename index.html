@@ -129,9 +129,30 @@ transform:translateY(0);
 
 <body>
 
-  <audio id="bgMusic" autoplay loop>
-  <source src="You can say that I'm a fool And I don't know very much But I think...they call this Love🫶🏻❤️✨ - SERENDIPITY ♡ (youtube).mp3" type="audio/mpeg">
-  </audio>
+  <audio id="bgMusic"></audio>
+
+<script>
+const songs = [
+  "song.mp3",
+  "song2.mp3"
+];
+
+let currentSong = 0;
+const player = document.getElementById("bgMusic");
+
+player.src = songs[currentSong];
+
+document.addEventListener("click", function () {
+  player.play();
+}, { once: true });
+
+player.addEventListener("ended", function () {
+  currentSong = (currentSong + 1) % songs.length;
+
+  player.src = songs[currentSong];
+  player.play();
+});
+</script>
 
 <div class="glow glow1"></div>
 <div class="glow glow2"></div>
