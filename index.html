@@ -78,11 +78,11 @@ opacity:0;
 }
 }
 .fade-out{
-    animation: fadeOut 1s forwards;
+    animation: fadeOut 3s forwards;
 }
 
 .fade-in{
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 4s forwards;
 }
 
 @keyframes fadeOut{
@@ -125,11 +125,7 @@ setTimeout(function(){
 </div>
 
 <script>
-function enterSite(){
-document.getElementById("welcome").style.display="none";
-document.getElementById("main").style.display="flex";
-}
-
+    
 setInterval(function(){
 let heart=document.createElement("div");
 heart.className="heart";
