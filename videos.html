@@ -206,15 +206,14 @@ const videos = [
 ];
 
 let currentVideo = 0;
-const player = document.getElementById("player");
+player.onended = function() {
+    currentVideo++;
 
-player.addEventListener("ended", function() {
-  currentVideo++;
-
-  if (currentVideo < videos.length) {
-    player.src = videos[currentVideo];
-    player.load();
-    player.play();
+    if(currentVideo < videos.length){
+        player.src = videos[currentVideo];
+        player.play();
+    }
+};
   }
 });
 </script>
